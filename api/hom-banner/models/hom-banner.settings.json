@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hom_banners",
+  "info": {
+    "name": "hom-banner",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "product": {
+      "model": "product"
+    },
+    "position": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
