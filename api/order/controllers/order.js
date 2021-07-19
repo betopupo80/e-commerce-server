@@ -76,7 +76,9 @@ module.exports = {
         product: product.id,
         user: idUser,
         totalPayment: totalPayment,
-        productsPayment: product.price * product.quantity,
+        productsPayment:
+          (product.price - (product.price * product.discount) / 100) *
+          product.quantity,
         quantity: product.quantity,
         idPayment: references,
         addressShipping
