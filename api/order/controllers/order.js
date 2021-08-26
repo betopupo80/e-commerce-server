@@ -25,7 +25,9 @@ module.exports = {
       email,
       fullname,
       references,
-      addressShipping
+      addressShipping,
+      schedule,
+      dayDelivery
     } = ctx.request.body;
     let totalPayment = 0;
     products.forEach(product => {
@@ -81,6 +83,8 @@ module.exports = {
           product.quantity,
         quantity: product.quantity,
         idPayment: references,
+        schedule: schedule,
+        dayDelivery: dayDelivery,
         addressShipping
       };
 
